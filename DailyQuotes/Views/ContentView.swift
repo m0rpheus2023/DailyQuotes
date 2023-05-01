@@ -67,8 +67,10 @@ struct ContentView: View {
               height: geometry.size.height * 0.5
             )
             .onTapGesture {
+              // new code using async/await
               quoteViewModel.loadData()
               imageViewModel.loadData()
+              // original code using dataTask
 //              quoteViewModel.getQuotes()
 //              imageViewModel.getImage()
             }
